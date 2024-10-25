@@ -1,6 +1,11 @@
 import { getTrainerProposal } from '@/api/proposal/getTrainerProposal';
+import { getUserProposal } from '@/api/proposal/getUserProposal';
 import { postProposal } from '@/api/proposal/postProposal';
-import { Proposal, TrainerProposalResponse } from '@/types';
+import {
+  Proposal,
+  TrainerProposalResponse,
+  UserProposalResponse,
+} from '@/types';
 import { useState } from 'react';
 
 export const useProposal = () => {
@@ -11,6 +16,19 @@ export const useProposal = () => {
     try {
       const response = await getTrainerProposal();
       setTrainerProposals(response);
+    } catch (error) {
+      console.error('PT 제안 리스트를 가져오는 데 실패했습니다:', error);
+      alert('PT 제안 리스트를 가져오는 데 실패했습니다.');
+    }
+  };
+
+  const [userProposals, setUserProposals] = useState<UserProposalResponse[]>(
+    []
+  );
+  const fetchUserProposals = async () => {
+    try {
+      const response = await getUserProposal();
+      setUserProposals(response);
     } catch (error) {
       console.error('PT 제안 리스트를 가져오는 데 실패했습니다:', error);
       alert('PT 제안 리스트를 가져오는 데 실패했습니다.');
@@ -28,5 +46,11 @@ export const useProposal = () => {
     }
   };
 
-  return { trainerProposals, fetchTrainerProposals, handleUploadProposal };
+  return {
+    userProposals,
+    fetchUserProposals,
+    trainerProposals,
+    fetchTrainerProposals,
+    handleUploadProposal,
+  };
 };
