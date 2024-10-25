@@ -14,7 +14,7 @@ import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
-import { ProposalHistory } from '@/pages/Proposal/ProposalHistory';
+import { SentProposal } from '@/pages/Proposal/SentProposal';
 
 const router = createBrowserRouter([
   {
@@ -66,8 +66,8 @@ const router = createBrowserRouter([
         element: <ProposalPage />,
       },
       {
-        path: RouterPath.proposalHistory,
-        element: <ProposalHistory />,
+        path: RouterPath.sentProposal,
+        element: <SentProposal />,
       },
     ],
   },

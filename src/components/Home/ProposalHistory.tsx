@@ -15,7 +15,7 @@ export const ProposalHistory = () => {
   const navigate = useNavigate();
 
   const handleProposalHistoryClick = () => {
-    navigate(RouterPath.proposalHistory);
+    navigate(RouterPath.sentProposal);
   };
 
   return (
