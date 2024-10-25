@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Text } from '@chakra-ui/react';
+import { Box, Card, Flex } from '@chakra-ui/react';
 import {
   StyledCardBody,
   StyledNameText,
