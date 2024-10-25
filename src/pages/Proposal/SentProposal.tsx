@@ -8,7 +8,7 @@ export const SentProposal = () => {
 
   useEffect(() => {
     fetchTrainerProposals();
-  }, [fetchTrainerProposals]);
+  }, []);
 
   return (
     <Wrapper>
