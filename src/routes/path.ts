@@ -10,4 +10,7 @@ export const RouterPath = {
   registerCareer: '/registerCareer',
   preference: '/preference',
   clientFinder: '/clientFinder',
+  proposal: '/proposal/:userId',
+  sentProposal: '/sentProposal',
+  receivedProposal: '/receivedProposal',
 };

@@ -1,15 +1,25 @@
 import { Card } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+
+import ReceiveOfferImage from '@/assets/invitation.png';
+import { RouterPath } from '@/routes/path';
+
 import {
-  Wrapper,
+  StyledCardBody,
   StyledImage,
   StyledText,
-  StyledCardBody,
+  Wrapper,
 } from './ReceivedOffers.styles';
-import ReceiveOfferImage from '@/assets/invitation.png';
 
 export const ReceivedOffers = () => {
+  const navigate = useNavigate();
+
+  const handleReceivedOfferClick = () => {
+    navigate(RouterPath.receivedProposal);
+  };
+
   return (
-    <Wrapper>
+    <Wrapper onClick={handleReceivedOfferClick}>
       <Card height='125px'>
         <StyledCardBody>
           <StyledText>받은 제안</StyledText>
