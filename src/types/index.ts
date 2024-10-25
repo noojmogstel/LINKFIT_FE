@@ -86,3 +86,13 @@ export interface TrainerProposalResponse {
   price: number;
   status: string;
 }
+
+export interface UserProposalResponse {
+  ptId: number;
+  trainerId: number;
+  trainerName: string;
+  trainerProfileImageUrl: string;
+  gymName: string;
+  totalCount: number;
+  price: number;
+}
