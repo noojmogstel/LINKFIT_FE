@@ -12,4 +12,5 @@ export const RouterPath = {
   clientFinder: '/clientFinder',
   proposal: '/proposal/:userId',
   sentProposal: '/sentProposal',
+  receivedProposal: '/receivedProposal',
 };

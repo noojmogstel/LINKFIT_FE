@@ -15,6 +15,7 @@ import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
 import { SentProposal } from '@/pages/Proposal/SentProposal';
+import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: RouterPath.sentProposal,
         element: <SentProposal />,
+      },
+      {
+        path: RouterPath.receivedProposal,
+        element: <ReceivedProposal />,
       },
     ],
   },
