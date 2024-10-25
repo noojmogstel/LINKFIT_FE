@@ -7,7 +7,6 @@ import {
   Wrapper,
   StyledStatusText,
 } from './ProposalUserProfile.styles';
-import imageUrl from '@/assets/date.png';
 import { TrainerProposalResponse } from '@/types';
 
 export const ProposalUserProfile = ({
@@ -20,7 +19,10 @@ export const ProposalUserProfile = ({
       <Card>
         <StyledCardBody>
           <Flex align='center'>
-            <StyledProfileImage src={imageUrl} alt='프로필' />
+            <StyledProfileImage
+              src={proposal.userProfileImageUrl}
+              alt='프로필'
+            />
             <Box>
               <StyledNameText>{proposal.userName} 회원님</StyledNameText>
               <StyledProposalText>
