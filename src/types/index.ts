@@ -47,7 +47,7 @@ export interface Career {
 }
 
 export interface BodyInfo {
-  infoId: number;
+  id: number;
   inbodyImageUrl: string;
   createDate: string;
 }
@@ -70,4 +70,29 @@ export interface PreferenceResponse {
   inbodyImageUrl: string;
   goal: string;
   profileImageUrl: string;
+}
+
+export interface Proposal {
+  userId: number;
+  totalCount: number;
+  price: number;
+}
+
+export interface TrainerProposalResponse {
+  id: number;
+  userName: string;
+  userProfileImageUrl: string;
+  totalCount: number;
+  price: number;
+  status: string;
+}
+
+export interface UserProposalResponse {
+  ptId: number;
+  trainerId: number;
+  trainerName: string;
+  trainerProfileImageUrl: string;
+  gymName: string;
+  totalCount: number;
+  price: number;
 }
