@@ -8,10 +8,18 @@ import {
   StyledText,
   Wrapper,
 } from './ReceivedOffers.styles';
+import { useNavigate } from 'react-router-dom';
+import { RouterPath } from '@/routes/path';
 
 export const ReceivedOffers = () => {
+  const navigate = useNavigate();
+
+  const handleReceivedOfferClick = () => {
+    navigate(RouterPath.receivedProposal);
+  };
+
   return (
-    <Wrapper>
+    <Wrapper onClick={handleReceivedOfferClick}>
       <Card height='125px'>
         <StyledCardBody>
           <StyledText>받은 제안</StyledText>
