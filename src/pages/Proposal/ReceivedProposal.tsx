@@ -1,7 +1,9 @@
-import { useProposal } from '@/hooks/useProposal';
-import { StyledTitleText, Wrapper } from './SentProposal.styles';
 import { useEffect } from 'react';
+
 import { ProposalTrainerProfile } from '@/components/Proposal/ProposalTrainerProfile';
+import { useProposal } from '@/hooks/useProposal';
+
+import { StyledTitleText, Wrapper } from './SentProposal.styles';
 
 export const ReceivedProposal = () => {
   const { userProposals, fetchUserProposals } = useProposal();

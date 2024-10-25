@@ -1,6 +1,8 @@
 import { Card } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 import ProposalHistoryImage from '@/assets/send.png';
+import { RouterPath } from '@/routes/path';
 
 import {
   StyledCardBody,
@@ -8,8 +10,6 @@ import {
   StyledText,
   Wrapper,
 } from './MyPT.styles';
-import { useNavigate } from 'react-router-dom';
-import { RouterPath } from '@/routes/path';
 
 export const ProposalHistory = () => {
   const navigate = useNavigate();

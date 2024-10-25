@@ -9,13 +9,13 @@ import { LoginPage } from '@/pages/Login';
 import { MyPage } from '@/pages/MyPage';
 import { PreferencePage } from '@/pages/Preference';
 import { ProposalPage } from '@/pages/Proposal/ProposalPage';
+import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
+import { SentProposal } from '@/pages/Proposal/SentProposal';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
-import { SentProposal } from '@/pages/Proposal/SentProposal';
-import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 
 const router = createBrowserRouter([
   {

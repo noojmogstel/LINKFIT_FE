@@ -1,16 +1,18 @@
 import { Box, Card, Flex } from '@chakra-ui/react';
+
+import { UserProposalResponse } from '@/types';
+
 import {
-  StyledCardBody,
-  StyledNameText,
-  StyledProposalText,
-  StyledProfileImage,
-  StyledGymText,
   StyledButtonWrapper,
+  StyledCardBody,
   StyledChatButton,
+  StyledGymText,
+  StyledNameText,
+  StyledProfileImage,
+  StyledProposalText,
   StyledReviewButton,
   Wrapper,
 } from './ProposalTrainerProfile.styles';
-import { UserProposalResponse } from '@/types';
 
 export const ProposalTrainerProfile = ({
   proposal,

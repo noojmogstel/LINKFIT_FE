@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { getTrainerProposal } from '@/api/proposal/getTrainerProposal';
 import { getUserProposal } from '@/api/proposal/getUserProposal';
 import { postProposal } from '@/api/proposal/postProposal';
@@ -6,7 +8,6 @@ import {
   TrainerProposalResponse,
   UserProposalResponse,
 } from '@/types';
-import { useState } from 'react';
 
 export const useProposal = () => {
   const [trainerProposals, setTrainerProposals] = useState<
