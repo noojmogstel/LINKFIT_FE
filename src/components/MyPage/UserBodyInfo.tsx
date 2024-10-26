@@ -1,20 +1,22 @@
-import { useState } from 'react';
 import {
+  Image,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
   ModalBody,
   ModalCloseButton,
-  Image,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+
 import { useBodyInfo } from '@/hooks/useBodyInfo';
+
 import {
+  HistoryBox,
   StyledButton,
   StyledCard,
-  HistoryBox,
-  StyledDefaultText,
   StyledDateText,
+  StyledDefaultText,
   StyledTitleText,
 } from './UserBodyInfo.styles';
 export const UserBodyInfo = () => {
@@ -39,7 +41,7 @@ export const UserBodyInfo = () => {
         <StyledDefaultText>등록된 인바디 이미지가 없습니다.</StyledDefaultText>
       ) : (
         bodyInfo.map((info) => (
-          <HistoryBox key={info.infoId}>
+          <HistoryBox key={info.id}>
             <StyledDateText>
               {new Date(info.createDate).toLocaleDateString()}
             </StyledDateText>

@@ -1,31 +1,36 @@
 import {
-  Card,
   Box,
+  Card,
   Flex,
   Image,
   Modal,
+  ModalBody,
+  ModalCloseButton,
   ModalContent,
   ModalHeader,
-  ModalCloseButton,
-  ModalBody,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { RouterPath } from '@/routes/path';
+import { PreferenceResponse } from '@/types';
+
 import {
-  Wrapper,
+  StyledButton,
   StyledCardBody,
-  StyledProfileImage,
-  StyledNameText,
   StyledGoalText,
   StyledInbodyButton,
-  StyledButton,
+  StyledNameText,
+  StyledProfileImage,
+  Wrapper,
 } from './ClientFinderProfile.styles';
-import { PreferenceResponse } from '@/types';
-import { useState } from 'react';
 
 export const ClientFinderProfile = ({
   preference,
 }: {
   preference: PreferenceResponse;
 }) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -37,6 +42,10 @@ export const ClientFinderProfile = ({
   const closeModal = () => {
     setIsOpen(false);
     setSelectedImage(null);
+  };
+
+  const navigateToProposal = (userId: number) => {
+    navigate(RouterPath.proposal.replace(':userId', userId.toString()));
   };
 
   return (
@@ -60,7 +69,9 @@ export const ClientFinderProfile = ({
         </StyledCardBody>
 
         <Flex justify='center'>
-          <StyledButton>제안하기</StyledButton>
+          <StyledButton onClick={() => navigateToProposal(preference.userId)}>
+            제안하기
+          </StyledButton>
         </Flex>
         <Modal isOpen={isOpen} onClose={closeModal}>
           <ModalContent>
