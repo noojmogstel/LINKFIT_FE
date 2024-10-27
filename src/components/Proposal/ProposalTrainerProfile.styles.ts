@@ -6,6 +6,7 @@ import { colors } from '@/styles/colors';
 export const Wrapper = styled.div`
   margin: 10px 0 10px;
   width: 500px;
+  cursor: pointer;
 `;
 
 export const StyledCardBody = styled(CardBody)`
