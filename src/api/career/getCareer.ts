@@ -12,6 +12,6 @@ export const getCareer = async () => {
 export const getTrainerCareer = async (trainerId: number) => {
   return await fetchAPI({
     method: 'GET',
-    endpoint: `trainers/${trainerId}`,
+    endpoint: `/careers/${trainerId}`,
   });
 };
