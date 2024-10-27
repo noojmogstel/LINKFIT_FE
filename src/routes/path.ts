@@ -13,4 +13,5 @@ export const RouterPath = {
   proposal: '/proposal/:userId',
   sentProposal: '/sentProposal',
   receivedProposal: '/receivedProposal',
+  trainerDetail: '/trainerDetail/:trainerId',
 };
