@@ -13,14 +13,22 @@ import {
   StyledReviewButton,
   Wrapper,
 } from './ProposalTrainerProfile.styles';
+import { useNavigate } from 'react-router-dom';
+import { RouterPath } from '@/routes/path';
 
 export const ProposalTrainerProfile = ({
   proposal,
 }: {
   proposal: UserProposalResponse;
 }) => {
+  const navigate = useNavigate();
+  const navigateToTrainerDetail = (trainerId: number) => {
+    navigate(
+      RouterPath.trainerDetail.replace(':trainerId', trainerId.toString())
+    );
+  };
   return (
-    <Wrapper>
+    <Wrapper onClick={() => navigateToTrainerDetail(proposal.trainerId)}>
       <Card>
         <StyledCardBody>
           <Flex align='center'>
