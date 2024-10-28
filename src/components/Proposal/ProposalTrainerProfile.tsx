@@ -1,5 +1,7 @@
 import { Box, Card, Flex } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
+import { RouterPath } from '@/routes/path';
 import { UserProposalResponse } from '@/types';
 
 import {
@@ -13,8 +15,6 @@ import {
   StyledReviewButton,
   Wrapper,
 } from './ProposalTrainerProfile.styles';
-import { useNavigate } from 'react-router-dom';
-import { RouterPath } from '@/routes/path';
 
 export const ProposalTrainerProfile = ({
   proposal,

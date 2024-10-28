@@ -1,13 +1,12 @@
 import { Text } from '@chakra-ui/react';
 
-import { useCareer } from '@/hooks/useCareer';
-
 import {
   CareerBox,
   StyledCard,
   StyledDefaultText,
   StyledTitleText,
 } from '@/components/MyPage/TrainerCareer.styles';
+import { useCareer } from '@/hooks/useCareer';
 
 interface TrainerCareerProps {
   trainerId: number;
