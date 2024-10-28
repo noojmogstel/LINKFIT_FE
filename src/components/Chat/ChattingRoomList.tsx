@@ -1,4 +1,4 @@
-import {ChattingList2} from "@/types";
+import {ChattingList} from "@/types";
 import {
   Card,
   Box,
@@ -14,9 +14,9 @@ import {RouterPath} from "@/routes/path";
 import {useNavigate} from "react-router-dom";
 
 export const ChattingRoomList = ({
-  chattingList2,
+  chattingList,
 } : {
-  chattingList2: ChattingList2;
+  chattingList: ChattingList;
 }) => {
 
   const navigate = useNavigate();
@@ -28,14 +28,14 @@ export const ChattingRoomList = ({
 
 
   return (
-      <Wrapper onClick={() => handleCardClick(chattingList2.Id)}>
+      <Wrapper onClick={() => handleCardClick(chattingList.Id)}>
         <Card>
           <StyledCardBody>
             <Flex align='center'>
-              <StyledProfileImage src={chattingList2.personProfileImageUrl} alt='프로필' />
+              <StyledProfileImage src={chattingList.personProfileImageUrl} alt='프로필' />
               <Box>
                 <Flex align='center'>
-                  <StyledNameText>{chattingList2.personName} 트레이너</StyledNameText>
+                  <StyledNameText>{chattingList.personName} 트레이너</StyledNameText>
                 </Flex>
               </Box>
             </Flex>
