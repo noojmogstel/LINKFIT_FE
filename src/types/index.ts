@@ -96,3 +96,10 @@ export interface UserProposalResponse {
   totalCount: number;
   price: number;
 }
+
+export interface TrainerProfileForUser {
+  name: string;
+  gender: string;
+  profileImageUrl: string;
+  gymName: string;
+}
