@@ -11,7 +11,7 @@ interface ChatMessageProps {
     roomId: number;       // 채팅방 ID
     content: string;      // 메시지 내용
     sender: string;       // 보낸 사람
-    timestamp?: string;   // 메시지 전송 시간 (선택 사항)
+    timestamp: string;   // 메시지 전송 시간 (선택 사항)
   };
 }
 

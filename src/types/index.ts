@@ -79,6 +79,13 @@ export interface ChattingList {
   personProfileImageUrl: string;
 }
 
+export interface ChattingList2 {
+  Id: number;
+  personId: number;
+  personName: string;
+  personProfileImageUrl: string;
+}
+
 export interface Message {
   roomId: number;
   content: string;
