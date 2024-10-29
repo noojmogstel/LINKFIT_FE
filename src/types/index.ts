@@ -103,3 +103,9 @@ export interface TrainerProfileForUser {
   profileImageUrl: string;
   gymName: string;
 }
+export interface LinkedClients {
+  id: number;
+  userId: number;
+  userName: string;
+  profileImageUrl: string;
+}
