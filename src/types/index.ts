@@ -81,7 +81,7 @@ export interface Proposal {
 export interface TrainerProposalResponse {
   id: number;
   userName: string;
-  userProfileImageUrl: string;
+  profileImageUrl: string;
   totalCount: number;
   price: number;
   status: string;
