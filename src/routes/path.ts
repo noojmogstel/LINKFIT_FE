@@ -14,4 +14,6 @@ export const RouterPath = {
   sentProposal: '/sentProposal',
   receivedProposal: '/receivedProposal',
   trainerDetail: '/trainerDetail/:trainerId',
+  userPtSchedule: '/userPtSchedule',
+  TrainerPtSchedule: '/TrainerPtSchedule',
 };

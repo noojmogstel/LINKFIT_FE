@@ -17,6 +17,7 @@ import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
+import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: RouterPath.trainerDetail,
         element: <TrainerDetail />,
+      },
+      {
+        path: RouterPath.userPtSchedule,
+        element: <UserPtSchedulePage />,
       },
     ],
   },
