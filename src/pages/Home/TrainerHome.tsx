@@ -1,10 +1,12 @@
 import { FindClient } from '@/components/Home/FindClient';
+import { LinkedClients } from '@/components/Home/LinkedClients';
 import { ProposalHistory } from '@/components/Home/ProposalHistory';
 import { Reviews } from '@/components/Home/Reviews';
 import { TrainerHomeProfile } from '@/components/Home/TrainerHomeProfile';
 
 import {
   FindClientWrapper,
+  LinkedClientsWrapper,
   ProposalHistoryWrapper,
   ReviewsWrapper,
   RightWrapper,
@@ -32,6 +34,9 @@ export const TrainerHomePage = () => {
           </ReviewsWrapper>
         </RightWrapper>
       </TrainerHomePTWrapper>
+      <LinkedClientsWrapper>
+        <LinkedClients />
+      </LinkedClientsWrapper>
     </Wrapper>
   );
 };

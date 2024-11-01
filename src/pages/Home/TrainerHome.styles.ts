@@ -41,3 +41,8 @@ export const ProposalHistoryWrapper = styled.div`
 export const ReviewsWrapper = styled.div`
   flex: 1;
 `;
+
+export const LinkedClientsWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`;

@@ -11,6 +11,8 @@ import { PreferencePage } from '@/pages/Preference';
 import { ProposalPage } from '@/pages/Proposal/ProposalPage';
 import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 import { SentProposal } from '@/pages/Proposal/SentProposal';
+import { TrainerDetail } from '@/pages/Proposal/TrainerDetail';
+import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
@@ -73,6 +75,14 @@ const router = createBrowserRouter([
       {
         path: RouterPath.receivedProposal,
         element: <ReceivedProposal />,
+      },
+      {
+        path: RouterPath.trainerDetail,
+        element: <TrainerDetail />,
+      },
+      {
+        path: RouterPath.userPtSchedule,
+        element: <UserPtSchedulePage />,
       },
     ],
   },

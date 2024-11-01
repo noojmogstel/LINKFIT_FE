@@ -21,10 +21,7 @@ export const ProposalUserProfile = ({
       <Card>
         <StyledCardBody>
           <Flex align='center'>
-            <StyledProfileImage
-              src={proposal.userProfileImageUrl}
-              alt='프로필'
-            />
+            <StyledProfileImage src={proposal.profileImageUrl} alt='프로필' />
             <Box>
               <StyledNameText>{proposal.userName} 회원님</StyledNameText>
               <StyledProposalText>

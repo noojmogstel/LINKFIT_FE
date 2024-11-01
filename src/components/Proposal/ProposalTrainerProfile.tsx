@@ -1,5 +1,7 @@
 import { Box, Card, Flex } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
+import { RouterPath } from '@/routes/path';
 import { UserProposalResponse } from '@/types';
 
 import {
@@ -19,8 +21,14 @@ export const ProposalTrainerProfile = ({
 }: {
   proposal: UserProposalResponse;
 }) => {
+  const navigate = useNavigate();
+  const navigateToTrainerDetail = (trainerId: number) => {
+    navigate(
+      RouterPath.trainerDetail.replace(':trainerId', trainerId.toString())
+    );
+  };
   return (
-    <Wrapper>
+    <Wrapper onClick={() => navigateToTrainerDetail(proposal.trainerId)}>
       <Card>
         <StyledCardBody>
           <Flex align='center'>
