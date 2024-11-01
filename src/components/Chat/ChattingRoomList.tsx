@@ -12,6 +12,7 @@ import {
 } from './ChattingRoomList.styles';
 import {RouterPath} from "@/routes/path";
 import {useNavigate} from "react-router-dom";
+import { useAuth } from '@/hooks/useAuth';
 
 export const ChattingRoomList = ({
   chattingList,
@@ -20,6 +21,7 @@ export const ChattingRoomList = ({
 }) => {
 
   const navigate = useNavigate();
+  const authType = useAuth().type === 'user' ? '트레이너' : '회원님';
 
   const handleCardClick = (roomId: number) => {
     console.log("Navigating to room ID:", roomId); // Check the roomId being passed
@@ -35,7 +37,9 @@ export const ChattingRoomList = ({
               <StyledProfileImage src={chattingList.personProfileImageUrl} alt='프로필' />
               <Box>
                 <Flex align='center'>
-                  <StyledNameText>{chattingList.personName} 트레이너</StyledNameText>
+                  <StyledNameText>
+                    {chattingList.personName} {authType}
+                  </StyledNameText>
                 </Flex>
               </Box>
             </Flex>
