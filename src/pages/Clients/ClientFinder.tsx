@@ -1,7 +1,7 @@
 import { ClientFinderProfile } from '@/components/Clients/ClientFinderProfile';
 import { usePreference } from '@/hooks/usePreference';
 
-import { StyledDefaultText,StyledText, Wrapper } from './ClientFinder.styles';
+import { StyledDefaultText, StyledText, Wrapper } from './ClientFinder.styles';
 
 export const ClientFinder = () => {
   const { preferences } = usePreference();
@@ -15,7 +15,10 @@ export const ClientFinder = () => {
         </StyledDefaultText>
       ) : (
         preferences.map((preference) => (
-          <ClientFinderProfile preference={preference} />
+          <ClientFinderProfile
+            key={preference.userId}
+            preference={preference}
+          />
         ))
       )}
     </Wrapper>

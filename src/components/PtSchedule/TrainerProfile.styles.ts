@@ -4,9 +4,7 @@ import styled from '@emotion/styled';
 import { colors } from '@/styles/colors';
 
 export const Wrapper = styled.div`
-  margin: 10px 0 10px;
-  width: 500px;
-  cursor: pointer;
+  margin: 30px 0 20px;
 `;
 
 export const StyledCardBody = styled(CardBody)`
@@ -14,16 +12,16 @@ export const StyledCardBody = styled(CardBody)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   width: 100%;
 `;
 
 export const StyledProfileImage = styled(Image)`
   width: 80px;
-  height: 80px;
-  margin-right: 20px;
   border: 1px solid #eeeeee;
   border-radius: 100%;
+  margin-top: 10px;
+  margin-right: 20px;
 `;
 
 export const StyledNameText = styled(Text)`
@@ -31,36 +29,19 @@ export const StyledNameText = styled(Text)`
   font-size: 20px;
 `;
 
-export const StyledProposalText = styled(Text)`
-  font-size: 16px;
-  font-weight: 600;
-  color: ${colors.mainColor};
-`;
-
 export const StyledGymText = styled(Text)`
-  font-size: 13px;
-  color: gray;
-  margin-top: 10px;
-`;
-
-export const StyledButtonWrapper = styled.div`
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 8px;
 `;
 
 export const StyledChatButton = styled(Button)`
   background-color: ${colors.mainColor};
   color: ${colors.white};
-  width: 120px;
-  height: 32px;
-
   &:hover {
     background-color: #ff467e;
   }
-`;
-
-export const StyledReviewButton = styled(Button)`
-  width: 120px;
-  height: 32px;
+  width: 80%;
+  height: 30px;
+  margin-top: 12px;
 `;
