@@ -74,9 +74,10 @@ export interface PreferenceResponse {
 
 export interface ChattingList {
   id: number;
-  personId: number;
-  personName: string;
-  personProfileImageUrl: string;
+  memberName: string;
+  memberProfileImageUrl: string;
+  lastMessage?: string;
+  lastSender?: string;
 }
 
 export interface Message {

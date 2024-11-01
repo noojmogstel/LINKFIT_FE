@@ -9,6 +9,8 @@ import {
   StyledCardBody,
   StyledProfileImage,
   StyledNameText,
+  StyledLastMessage,
+  TextWrapper,
 } from './ChattingRoomList.styles';
 import {RouterPath} from "@/routes/path";
 import {useNavigate} from "react-router-dom";
@@ -21,10 +23,11 @@ export const ChattingRoomList = ({
 }) => {
 
   const navigate = useNavigate();
-  const authType = useAuth().type === 'user' ? '트레이너' : '회원님';
+  const authType = useAuth().type === 'user' ? 'USER' : 'TRAINER';
+  const sender = authType === chattingList.lastSender;
 
   const handleCardClick = (roomId: number) => {
-    console.log("Navigating to room ID:", roomId); // Check the roomId being passed
+    console.log("Navigating to room ID:", roomId);
     navigate(`${RouterPath.chatting}/${roomId}`);
   };
 
@@ -33,16 +36,15 @@ export const ChattingRoomList = ({
       <Wrapper onClick={() => handleCardClick(chattingList.id)}>
         <Card>
           <StyledCardBody>
-            <Flex align='center'>
-              <StyledProfileImage src={chattingList.personProfileImageUrl} alt='프로필' />
-              <Box>
-                <Flex align='center'>
-                  <StyledNameText>
-                    {chattingList.personName} {authType}
-                  </StyledNameText>
-                </Flex>
-              </Box>
-            </Flex>
+            <StyledProfileImage src={chattingList.memberProfileImageUrl} alt='프로필' />
+            <TextWrapper>
+              <StyledNameText>
+                {chattingList.memberName} {authType === 'USER' ? '트레이너' : '회원님'}
+              </StyledNameText>
+              <StyledLastMessage isSender={sender}>
+                {chattingList.lastMessage}
+              </StyledLastMessage>
+            </TextWrapper>
           </StyledCardBody>
         </Card>
       </Wrapper>
