@@ -60,11 +60,11 @@ const router = createBrowserRouter([
         element: <ClientFinder />,
       },
       {
-        path: RouterPath.chattingList,
+        path: RouterPath.chatting,
         element: <ChattingList />,
       },
       {
-        path: `${RouterPath.chattingRoom}/:roomId`, // This should match /chat/1
+        path: `${RouterPath.chatting}/:id`,
         element: <ChattingRoom />,
       },
     ],

@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import * as StompJs from '@stomp/stompjs';
+import {Message} from "@/types";
 
 export const useChatRoom = (roomId: number) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [stompClient, setStompClient] = useState<StompJs.Client | null>(null);
   const [isConnected, setIsConnected] = useState(false);
 
@@ -15,7 +16,7 @@ export const useChatRoom = (roomId: number) => {
         setIsConnected(true);
 
         client.subscribe('/sub/topic/room/' + roomId, (message) => {
-          const receivedMessage: ChatMessage = JSON.parse(message.body);
+          const receivedMessage: Message = JSON.parse(message.body);
           setMessages((prevMessages) => [...prevMessages, receivedMessage]);
         });
       },

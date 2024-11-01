@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <Wrapper>
-      <Link to={RouterPath.chattingList}>
+      <Link to={RouterPath.chatting}>
         <StyledChatIcon />
       </Link>
       <Link to={RouterPath.home}>

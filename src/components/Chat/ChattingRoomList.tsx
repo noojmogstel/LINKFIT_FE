@@ -23,12 +23,12 @@ export const ChattingRoomList = ({
 
   const handleCardClick = (roomId: number) => {
     console.log("Navigating to room ID:", roomId); // Check the roomId being passed
-    navigate(`${RouterPath.chattingRoom}/${roomId}`);
+    navigate(`${RouterPath.chatting}/${roomId}`);
   };
 
 
   return (
-      <Wrapper onClick={() => handleCardClick(chattingList.Id)}>
+      <Wrapper onClick={() => handleCardClick(chattingList.id)}>
         <Card>
           <StyledCardBody>
             <Flex align='center'>
