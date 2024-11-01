@@ -1,14 +1,15 @@
 import { Card, Flex } from '@chakra-ui/react';
 
+import { usePtProfile } from '@/hooks/usePtProfile';
+
 import {
   StyledCardBody,
+  StyledChatButton,
   StyledGymText,
   StyledNameText,
   StyledProfileImage,
-  StyledChatButton,
   Wrapper,
 } from './TrainerProfile.styles';
-import { usePtProfile } from '@/hooks/usePtProfile';
 
 export const TrainerProfile = () => {
   const { trainerProfile } = usePtProfile();

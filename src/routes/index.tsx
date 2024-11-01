@@ -12,12 +12,12 @@ import { ProposalPage } from '@/pages/Proposal/ProposalPage';
 import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 import { SentProposal } from '@/pages/Proposal/SentProposal';
 import { TrainerDetail } from '@/pages/Proposal/TrainerDetail';
+import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
-import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 
 const router = createBrowserRouter([
   {

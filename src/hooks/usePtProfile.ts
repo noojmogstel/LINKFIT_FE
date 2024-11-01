@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { PtTrainerProfile } from '@/types';
 import { getPtTrainerProfile } from '@/api/pt/getPtProfile';
+import { PtTrainerProfile } from '@/types';
 
 export const usePtProfile = () => {
   const [trainerProfile, setTrainerProfile] = useState<PtTrainerProfile>();
