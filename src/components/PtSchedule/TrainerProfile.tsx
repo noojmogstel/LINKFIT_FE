@@ -27,7 +27,7 @@ export const TrainerProfile = () => {
               src={trainerProfile.profileImageUrl}
               alt='프로필'
             />
-            <Flex direction='column'>
+            <Flex direction='column' alignItems='flex-start'>
               <StyledNameText mt='15px'>
                 {trainerProfile.trainerName} 트레이너
               </StyledNameText>
