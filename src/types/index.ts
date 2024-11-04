@@ -81,7 +81,7 @@ export interface Proposal {
 export interface TrainerProposalResponse {
   id: number;
   userName: string;
-  userProfileImageUrl: string;
+  profileImageUrl: string;
   totalCount: number;
   price: number;
   status: string;
@@ -95,4 +95,26 @@ export interface UserProposalResponse {
   gymName: string;
   totalCount: number;
   price: number;
+}
+
+export interface TrainerProfileForUser {
+  name: string;
+  gender: string;
+  profileImageUrl: string;
+  gymName: string;
+}
+
+export interface LinkedClients {
+  id: number;
+  userId: number;
+  userName: string;
+  profileImageUrl: string;
+}
+
+export interface PtTrainerProfile {
+  trainerId: number;
+  trainerName: string;
+  gymName: string;
+  count: number;
+  profileImageUrl: string;
 }

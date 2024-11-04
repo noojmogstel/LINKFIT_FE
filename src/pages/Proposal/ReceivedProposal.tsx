@@ -1,3 +1,4 @@
+import { Text } from '@chakra-ui/react';
 import { useEffect } from 'react';
 
 import { ProposalTrainerProfile } from '@/components/Proposal/ProposalTrainerProfile';
@@ -20,7 +21,7 @@ export const ReceivedProposal = () => {
           <ProposalTrainerProfile key={proposal.ptId} proposal={proposal} />
         ))
       ) : (
-        <text>아직 제안한 회원이 없습니다.</text>
+        <Text>아직 제안한 회원이 없습니다.</Text>
       )}
     </Wrapper>
   );
