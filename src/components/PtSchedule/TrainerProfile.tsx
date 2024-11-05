@@ -10,9 +10,10 @@ import {
   StyledProfileImage,
   Wrapper,
 } from './TrainerProfile.styles';
+import { UserPtDetail } from '@/types';
 
 export const TrainerProfile = () => {
-  const { ptDetail } = usePtDetail();
+  const { ptDetail } = usePtDetail<UserPtDetail>();
 
   if (!ptDetail) {
     return <p>프로필 정보를 불러오는 중...</p>;

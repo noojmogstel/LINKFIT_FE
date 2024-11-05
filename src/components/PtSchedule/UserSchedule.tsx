@@ -3,9 +3,10 @@ import { Card, Text } from '@chakra-ui/react';
 import { usePtDetail } from '@/hooks/usePtDetail';
 
 import { Wrapper } from './UserSchedule.styles';
+import { UserPtDetail } from '@/types';
 
 export const UserSchedule = () => {
-  const { ptDetail } = usePtDetail();
+  const { ptDetail } = usePtDetail<UserPtDetail>();
 
   if (!ptDetail) {
     return <Text>PT 일정 정보를 불러오는 중...</Text>;
