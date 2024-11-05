@@ -1,6 +1,7 @@
 import { TrainerProfile } from '@/components/PtSchedule/TrainerProfile';
-import { Wrapper } from './UserPtSchedule.styles';
 import { UserSchedule } from '@/components/PtSchedule/UserSchedule';
+
+import { Wrapper } from './UserPtSchedule.styles';
 
 export const UserPtSchedulePage = () => {
   return (

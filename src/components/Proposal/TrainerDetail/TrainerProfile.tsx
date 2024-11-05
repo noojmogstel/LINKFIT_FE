@@ -1,6 +1,7 @@
 import { Card } from '@chakra-ui/react';
 
 import { useProfile } from '@/hooks/useProfile';
+import { getDisplayGender, Profile } from '@/utils/getDisplayGender';
 
 import {
   StyledCardBody,
@@ -9,7 +10,6 @@ import {
   StyledProfileImage,
   Wrapper,
 } from './TrainerProfile.styles';
-import { getDisplayGender, Profile } from '@/utils/getDisplayGender';
 
 interface TrainerProfileProps {
   trainerId: number;
