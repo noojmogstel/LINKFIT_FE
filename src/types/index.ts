@@ -120,6 +120,13 @@ export interface UserPtDetail {
   schedules: Schedule[];
 }
 
+export interface TrainerPtDetail {
+  userId: number;
+  userName: string;
+  profileImageUrl: string;
+  schedules: Schedule[];
+}
+
 export interface Schedule {
   isCompleted: string;
   date: string;
