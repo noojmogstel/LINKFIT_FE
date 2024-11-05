@@ -6,3 +6,10 @@ export const getUserPtDetail = async () => {
     endpoint: '/pt/user',
   });
 };
+
+export const getTrainerPtDetail = async (ptId: number) => {
+  return await fetchAPI({
+    method: 'GET',
+    endpoint: `/pt/${ptId}/trainer`,
+  });
+};
