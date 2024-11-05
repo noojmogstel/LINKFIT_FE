@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { getTrainerPtDetail, getUserPtDetail } from '@/api/pt/getPtDetail';
-import { UserPtDetail } from '@/types';
 import { useAuth } from './useAuth';
 
-export const usePtDetail = () => {
+export const usePtDetail = <T>() => {
   const { type } = useAuth();
-  const [ptDetail, setPtDetail] = useState<UserPtDetail>();
+  const [ptDetail, setPtDetail] = useState<T | undefined>();
 
   const fetchPtDetail = async (ptId?: number) => {
     try {
