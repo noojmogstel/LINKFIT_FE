@@ -1,0 +1,30 @@
+import { useEffect, useState } from 'react';
+
+import { getTrainerPtDetail, getUserPtDetail } from '@/api/pt/getPtDetail';
+import { UserPtDetail } from '@/types';
+import { useAuth } from './useAuth';
+
+export const usePtDetail = () => {
+  const { type } = useAuth();
+  const [ptDetail, setPtDetail] = useState<UserPtDetail>();
+
+  const fetchPtDetail = async (ptId?: number) => {
+    try {
+      if (ptId && type === 'trainer') {
+        const data = await getTrainerPtDetail(ptId);
+        setPtDetail(data);
+      } else {
+        const data = await getUserPtDetail();
+        setPtDetail(data);
+      }
+    } catch (error) {
+      console.error('PT 데이터를 가져오는데 실패했습니다.', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPtDetail();
+  }, []);
+
+  return { ptDetail };
+};

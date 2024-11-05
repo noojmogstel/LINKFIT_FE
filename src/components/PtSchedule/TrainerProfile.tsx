@@ -1,6 +1,6 @@
 import { Card, Flex } from '@chakra-ui/react';
 
-import { useUserPtDetail } from '@/hooks/useUserPtDetail';
+import { usePtDetail } from '@/hooks/usePtDetail';
 
 import {
   StyledCardBody,
@@ -12,7 +12,7 @@ import {
 } from './TrainerProfile.styles';
 
 export const TrainerProfile = () => {
-  const { ptDetail } = useUserPtDetail();
+  const { ptDetail } = usePtDetail();
 
   if (!ptDetail) {
     return <p>프로필 정보를 불러오는 중...</p>;
