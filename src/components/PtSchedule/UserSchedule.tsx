@@ -1,9 +1,9 @@
 import { Card, Text } from '@chakra-ui/react';
 
 import { usePtDetail } from '@/hooks/usePtDetail';
+import { UserPtDetail } from '@/types';
 
 import { Wrapper } from './UserSchedule.styles';
-import { UserPtDetail } from '@/types';
 
 export const UserSchedule = () => {
   const { ptDetail } = usePtDetail<UserPtDetail>();

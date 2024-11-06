@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { getTrainerPtDetail, getUserPtDetail } from '@/api/pt/getPtDetail';
+
 import { useAuth } from './useAuth';
 
 export const usePtDetail = <T>(ptId?: number) => {

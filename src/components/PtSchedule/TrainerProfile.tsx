@@ -1,6 +1,7 @@
 import { Card, Flex } from '@chakra-ui/react';
 
 import { usePtDetail } from '@/hooks/usePtDetail';
+import { UserPtDetail } from '@/types';
 
 import {
   StyledCardBody,
@@ -10,7 +11,6 @@ import {
   StyledProfileImage,
   Wrapper,
 } from './TrainerProfile.styles';
-import { UserPtDetail } from '@/types';
 
 export const TrainerProfile = () => {
   const { ptDetail } = usePtDetail<UserPtDetail>();
