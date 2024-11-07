@@ -1,9 +1,15 @@
-import { Card, Text } from '@chakra-ui/react';
+import { Card, Flex, Text } from '@chakra-ui/react';
 
 import { usePtDetail } from '@/hooks/usePtDetail';
 import { UserPtDetail } from '@/types';
 
-import { Wrapper } from './UserSchedule.styles';
+import {
+  FlexWrapper,
+  StyledCard,
+  StyledDefaultText,
+  TitleText,
+  Wrapper,
+} from './UserSchedule.styles';
 
 export const UserSchedule = () => {
   const { ptDetail } = usePtDetail<UserPtDetail>();
@@ -14,17 +20,23 @@ export const UserSchedule = () => {
 
   return (
     <Wrapper>
-      <Text>PT 일정</Text>
-      {ptDetail?.schedules.length === 0 ? (
-        <Text>등록된 PT 일정이 없습니다.</Text>
-      ) : (
-        ptDetail.schedules.map((schedule, index) => (
-          <Card key={index}>
-            <Text>{new Date(schedule.date).toLocaleDateString()}</Text>
-            <Text>{schedule.isCompleted ? '완료' : '미완료'}</Text>
-          </Card>
-        ))
-      )}
+      <TitleText>PT 일정</TitleText>
+      <FlexWrapper>
+        {ptDetail?.schedules.length === 0 ? (
+          <StyledDefaultText>등록된 PT 일정이 없습니다.</StyledDefaultText>
+        ) : (
+          ptDetail.schedules.map((schedule, index) => (
+            <StyledCard key={index}>
+              <Flex justifyContent='space-around'>
+                <Text minWidth='100px'>
+                  {new Date(schedule.date).toLocaleDateString()}
+                </Text>
+                <Text>{schedule.isCompleted ? '완료' : '미완료'}</Text>
+              </Flex>
+            </StyledCard>
+          ))
+        )}
+      </FlexWrapper>
     </Wrapper>
   );
 };
