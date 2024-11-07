@@ -17,6 +17,10 @@ export const TitleText = styled(Text)`
   margin-bottom: 20px;
 `;
 
+export const StyledDefaultText = styled(Text)`
+  text-align: center;
+`;
+
 export const FlexWrapper = styled.div`
   width: 100%;
   display: flex;

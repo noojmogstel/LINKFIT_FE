@@ -12,6 +12,7 @@ import {
   StyledAddButton,
   StyledButton,
   StyledCard,
+  StyledDefaultText,
   StyledInput,
 } from './TrainerSchedule.styles';
 import { TitleText, Wrapper } from './TrainerSchedule.styles';
@@ -46,7 +47,7 @@ export const TrainerSchedule = () => {
       <TitleText>PT 일정</TitleText>
       <FlexWrapper>
         {ptDetail?.schedules.length === 0 ? (
-          <Text>등록된 PT 일정이 없습니다.</Text>
+          <StyledDefaultText>등록된 PT 일정이 없습니다.</StyledDefaultText>
         ) : (
           ptDetail.schedules.map((schedule, index) => (
             <StyledCard key={index}>
