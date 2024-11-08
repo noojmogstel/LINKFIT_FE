@@ -128,6 +128,7 @@ export interface TrainerPtDetail {
 }
 
 export interface Schedule {
+  scheduleId: number;
   isCompleted: string;
   date: string;
 }
