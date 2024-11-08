@@ -1,5 +1,7 @@
-import { Card, Text } from '@chakra-ui/react';
+import { Button, Card, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+
+import { colors } from '@/styles/colors';
 
 export const Wrapper = styled.div`
   width: 90%;
@@ -32,4 +34,15 @@ export const StyledCard = styled(Card)`
   margin-bottom: 10px;
   border: 1px solid #e0e0e0;
   margin: 0 auto;
+`;
+
+export const StyledCompleteButton = styled(Button)`
+  height: 30px;
+  background-color: ${colors.mainColor};
+  color: ${colors.white};
+  font-size: 14px;
+
+  &:hover {
+    background-color: #ff467e;
+  }
 `;
