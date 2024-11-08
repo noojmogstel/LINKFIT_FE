@@ -1,11 +1,13 @@
-import { Card, Flex, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 import { usePtDetail } from '@/hooks/usePtDetail';
+import { useSchedule } from '@/hooks/useSchedule';
 import { UserPtDetail } from '@/types';
 
 import {
   FlexWrapper,
   StyledCard,
+  StyledCompleteButton,
   StyledDefaultText,
   TitleText,
   Wrapper,
@@ -13,6 +15,7 @@ import {
 
 export const UserSchedule = () => {
   const { ptDetail } = usePtDetail<UserPtDetail>();
+  const { handleCompleteSchedule } = useSchedule();
 
   if (!ptDetail) {
     return <Text>PT 일정 정보를 불러오는 중...</Text>;
@@ -31,7 +34,19 @@ export const UserSchedule = () => {
                 <Text minWidth='100px'>
                   {new Date(schedule.date).toLocaleDateString()}
                 </Text>
-                <Text>{schedule.isCompleted ? '완료' : '미완료'}</Text>
+                <Text>
+                  {schedule.isCompleted ? (
+                    '완료'
+                  ) : (
+                    <StyledCompleteButton
+                      onClick={() =>
+                        handleCompleteSchedule(schedule.scheduleId)
+                      }
+                    >
+                      완료
+                    </StyledCompleteButton>
+                  )}
+                </Text>
               </Flex>
             </StyledCard>
           ))
