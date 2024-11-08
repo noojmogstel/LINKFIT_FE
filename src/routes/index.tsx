@@ -14,13 +14,13 @@ import { ProposalPage } from '@/pages/Proposal/ProposalPage';
 import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 import { SentProposal } from '@/pages/Proposal/SentProposal';
 import { TrainerDetail } from '@/pages/Proposal/TrainerDetail';
+import { TrainerPtSchedulePage } from '@/pages/PtSchedule/TrainerPtSchedule';
 import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
 
 import { RouterPath } from './path';
-import { TrainerPtSchedulePage } from '@/pages/PtSchedule/TrainerPtSchedule';
 
 const router = createBrowserRouter([
   {
@@ -90,6 +90,14 @@ const router = createBrowserRouter([
       {
         path: RouterPath.trainerPtSchedule,
         element: <TrainerPtSchedulePage />,
+      },
+      {
+        path: RouterPath.chatting,
+        element: <ChattingList />,
+      },
+      {
+        path: `${RouterPath.chatting}/:id`,
+        element: <ChattingRoom />,
       },
     ],
   },
