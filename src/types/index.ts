@@ -132,3 +132,11 @@ export interface Schedule {
   isCompleted: string;
   date: string;
 }
+
+export interface ChattingList {
+  id: number;
+  memberName: string;
+  memberProfileImageUrl: string;
+  lastMessage?: string;
+  lastSender?: string;
+}
