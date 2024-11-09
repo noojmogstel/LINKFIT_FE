@@ -140,3 +140,10 @@ export interface ChattingList {
   lastMessage?: string;
   lastSender?: string;
 }
+
+export interface Message {
+  roomId: number;
+  content: string;
+  sender: string;
+  date: string;
+}
