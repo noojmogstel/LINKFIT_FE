@@ -3,9 +3,9 @@ import { Card, Flex } from '@chakra-ui/react';
 import { usePtDetail } from '@/hooks/usePtDetail';
 import { UserPtDetail } from '@/types';
 
+import { ChattingButton } from '../Chat/ChattingButton';
 import {
   StyledCardBody,
-  StyledChatButton,
   StyledGymText,
   StyledNameText,
   StyledProfileImage,
@@ -32,7 +32,7 @@ export const TrainerProfile = () => {
               <StyledGymText>소속 : {ptDetail.gymName}</StyledGymText>
             </Flex>
           </Flex>
-          <StyledChatButton>1:1 채팅</StyledChatButton>
+          <ChattingButton opponentId={ptDetail.trainerId} />
         </StyledCardBody>
       </Card>
     </Wrapper>
