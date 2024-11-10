@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import { RegisterBodyInfo } from '@/pages/BodyInfo/RegisterBodyInfo';
 import { RegisterCareer } from '@/pages/Career/RegisterCareer';
+import { ChattingList } from '@/pages/Chat/ChattingList';
+import { ChattingRoom } from '@/pages/Chat/ChattingRoom';
 import { ClientFinder } from '@/pages/Clients/ClientFinder';
 import { HomePage } from '@/pages/Home';
 import { LoginPage } from '@/pages/Login';
@@ -12,6 +14,7 @@ import { ProposalPage } from '@/pages/Proposal/ProposalPage';
 import { ReceivedProposal } from '@/pages/Proposal/ReceivedProposal';
 import { SentProposal } from '@/pages/Proposal/SentProposal';
 import { TrainerDetail } from '@/pages/Proposal/TrainerDetail';
+import { TrainerPtSchedulePage } from '@/pages/PtSchedule/TrainerPtSchedule';
 import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
@@ -83,6 +86,18 @@ const router = createBrowserRouter([
       {
         path: RouterPath.userPtSchedule,
         element: <UserPtSchedulePage />,
+      },
+      {
+        path: RouterPath.trainerPtSchedule,
+        element: <TrainerPtSchedulePage />,
+      },
+      {
+        path: RouterPath.chatting,
+        element: <ChattingList />,
+      },
+      {
+        path: `${RouterPath.chatting}/:id`,
+        element: <ChattingRoom />,
       },
     ],
   },
