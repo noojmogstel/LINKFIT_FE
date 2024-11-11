@@ -6,6 +6,8 @@ export const useSchedule = () => {
     try {
       await postSchedule(ptId, startTime);
       alert('PT 일정이 성공적으로 추가되었습니다.');
+      // TODO : 스케쥴 바로 반영되게끔 하는 것 새로고침 말고 다른 방법 시도하기
+      window.location.reload();
     } catch (error) {
       console.error('PT 일정 추가 실패:', error);
       alert('PT 일정 추가에 실패했습니다.');
@@ -16,6 +18,8 @@ export const useSchedule = () => {
     try {
       await putSchedule(scheduleId);
       alert('일정이 완료되었습니다.');
+      // TODO : 스케쥴 바로 반영되게끔 하는 것 새로고침 말고 다른 방법 시도하기
+      window.location.reload();
     } catch (error) {
       console.error('일정 완료 처리 실패:', error);
       alert('일정 완료 처리에 실패했습니다.');
