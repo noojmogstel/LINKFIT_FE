@@ -21,7 +21,7 @@ export const TrainerMyPage = () => {
     <Wrapper>
       <TrainerMyPageProfile />
       <StyledButton type='button' onClick={navigateToSelectGym}>
-        헬스장 등록하기
+        헬스장 선택하기
       </StyledButton>
       <StyledButton type='button' onClick={navigateToRegisterCareer}>
         경력 등록하기
