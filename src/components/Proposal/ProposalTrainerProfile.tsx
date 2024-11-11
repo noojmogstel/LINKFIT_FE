@@ -15,7 +15,6 @@ import {
   StyledReviewButton,
   Wrapper,
 } from './ProposalTrainerProfile.styles';
-
 export const ProposalTrainerProfile = ({
   proposal,
 }: {
@@ -47,7 +46,11 @@ export const ProposalTrainerProfile = ({
 
           <StyledButtonWrapper>
             <StyledReviewButton>리뷰 보기</StyledReviewButton>
-            <StyledChatButton>채팅하기</StyledChatButton>
+            <StyledChatButton
+              width='120px'
+              height='32px'
+              opponentId={proposal.trainerId}
+            />
           </StyledButtonWrapper>
         </StyledCardBody>
       </Card>
