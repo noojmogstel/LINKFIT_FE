@@ -147,3 +147,9 @@ export interface Message {
   sender: string;
   date: string;
 }
+
+export interface Gym {
+  id: number;
+  name: string;
+  location: string;
+}
