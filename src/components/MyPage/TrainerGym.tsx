@@ -1,5 +1,3 @@
-import { Text } from '@chakra-ui/react';
-
 import { useProfile } from '@/hooks/useProfile';
 import { TrainerProfile } from '@/types';
 
