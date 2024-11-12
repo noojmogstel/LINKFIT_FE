@@ -2,6 +2,7 @@ import { Button, CardBody, Image, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
 import { colors } from '@/styles/colors';
+
 import { ChattingButton } from '../Chat/ChattingButton';
 
 export const Wrapper = styled.div`
