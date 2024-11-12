@@ -40,6 +40,7 @@ export interface TrainerProfile {
   profileImageUrl: string;
   name: string;
   gender: string;
+  gymName: string;
 }
 
 export interface Career {
