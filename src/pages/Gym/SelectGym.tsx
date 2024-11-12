@@ -11,8 +11,10 @@ import {
   ModalOverlay,
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useGym } from '@/hooks/useGym';
+import { RouterPath } from '@/routes/path';
 
 import {
   StyledListItem,
@@ -23,6 +25,7 @@ import {
 } from './SelectGym.styles';
 
 export const SelectGym = () => {
+  const navigate = useNavigate();
   const [keyword, setKeyword] = useState('');
   const { gyms, isModalOpen, searchGyms, registerGym, closeModal } = useGym();
 
@@ -34,6 +37,7 @@ export const SelectGym = () => {
 
   const handleSelectGym = (gymId: number) => {
     registerGym(gymId);
+    navigate(RouterPath.mypage);
   };
 
   return (
