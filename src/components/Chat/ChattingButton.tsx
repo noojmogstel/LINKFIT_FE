@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
+
 import { getChattingRoomId } from '@/api/chat/getChattingRoom';
 import { RouterPath } from '@/routes/path';
+
 import { StyledChatButton } from './ChattingButton.styles';
 
 export const ChattingButton = ({

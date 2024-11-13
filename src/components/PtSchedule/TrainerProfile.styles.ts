@@ -8,6 +8,13 @@ export const Wrapper = styled.div`
   margin: 30px 0 20px;
 `;
 
+export const StyledDefaultText = styled(Text)`
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 40px;
+`;
+
 export const StyledCardBody = styled(CardBody)`
   display: flex;
   flex-direction: column;

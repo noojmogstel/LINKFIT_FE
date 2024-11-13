@@ -40,6 +40,7 @@ export interface TrainerProfile {
   profileImageUrl: string;
   name: string;
   gender: string;
+  gymName: string;
 }
 
 export interface Career {
@@ -146,4 +147,10 @@ export interface Message {
   content: string;
   sender: string;
   date: string;
+}
+
+export interface Gym {
+  id: number;
+  name: string;
+  location: string;
 }

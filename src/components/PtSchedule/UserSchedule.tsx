@@ -17,16 +17,16 @@ export const UserSchedule = () => {
   const { ptDetail } = usePtDetail<UserPtDetail>();
   const { handleCompleteSchedule } = useSchedule();
 
-  if (!ptDetail) {
-    return <Text>PT 일정 정보를 불러오는 중...</Text>;
-  }
-
   return (
     <Wrapper>
       <TitleText>PT 일정</TitleText>
       <FlexWrapper>
-        {ptDetail?.schedules.length === 0 ? (
-          <StyledDefaultText>등록된 PT 일정이 없습니다.</StyledDefaultText>
+        {!ptDetail ? (
+          <StyledDefaultText>PT 매칭을 기다려주세요!</StyledDefaultText>
+        ) : ptDetail.schedules.length === 0 ? (
+          <StyledDefaultText>
+            PT 매칭 전이므로 등록된 PT 일정이 없습니다.
+          </StyledDefaultText>
         ) : (
           ptDetail.schedules.map((schedule, index) => (
             <StyledCard key={index}>

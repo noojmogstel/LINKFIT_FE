@@ -6,6 +6,7 @@ import { RegisterCareer } from '@/pages/Career/RegisterCareer';
 import { ChattingList } from '@/pages/Chat/ChattingList';
 import { ChattingRoom } from '@/pages/Chat/ChattingRoom';
 import { ClientFinder } from '@/pages/Clients/ClientFinder';
+import { SelectGym } from '@/pages/Gym/SelectGym';
 import { HomePage } from '@/pages/Home';
 import { LoginPage } from '@/pages/Login';
 import { MyPage } from '@/pages/MyPage';
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
       {
         path: `${RouterPath.chatting}/:id`,
         element: <ChattingRoom />,
+      },
+      {
+        path: RouterPath.selectGym,
+        element: <SelectGym />,
       },
     ],
   },

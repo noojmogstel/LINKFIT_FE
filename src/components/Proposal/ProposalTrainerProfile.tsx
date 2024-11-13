@@ -1,13 +1,16 @@
 import { Box, Card, Flex } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
+import { usePt } from '@/hooks/usePt';
 import { RouterPath } from '@/routes/path';
 import { UserProposalResponse } from '@/types';
 
 import {
+  StyledAcceptButton,
   StyledButtonWrapper,
   StyledCardBody,
   StyledChatButton,
+  StyledDeleteButton,
   StyledGymText,
   StyledNameText,
   StyledProfileImage,
@@ -26,6 +29,8 @@ export const ProposalTrainerProfile = ({
       RouterPath.trainerDetail.replace(':trainerId', trainerId.toString())
     );
   };
+
+  const { handleAcceptPt, handleDeletePt } = usePt();
   return (
     <Wrapper onClick={() => navigateToTrainerDetail(proposal.trainerId)}>
       <Card>
@@ -52,6 +57,20 @@ export const ProposalTrainerProfile = ({
               opponentId={proposal.trainerId}
             />
           </StyledButtonWrapper>
+          <StyledAcceptButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleAcceptPt(proposal.ptId);
+            }}
+          >
+            수락하기
+          </StyledAcceptButton>
+          <StyledDeleteButton
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDeletePt(proposal.ptId);
+            }}
+          />
         </StyledCardBody>
       </Card>
     </Wrapper>
