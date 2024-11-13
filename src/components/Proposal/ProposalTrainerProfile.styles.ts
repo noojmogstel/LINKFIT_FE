@@ -1,3 +1,4 @@
+import { SmallCloseIcon } from '@chakra-ui/icons';
 import { Button, CardBody, Image, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
@@ -18,6 +19,7 @@ export const StyledCardBody = styled(CardBody)`
   justify-content: center;
   text-align: left;
   width: 100%;
+  position: relative;
 `;
 
 export const StyledProfileImage = styled(Image)`
@@ -46,7 +48,7 @@ export const StyledGymText = styled(Text)`
 `;
 
 export const StyledButtonWrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   gap: 10px;
 `;
@@ -60,4 +62,20 @@ export const StyledReviewButton = styled(Button)`
   width: 120px;
   height: 32px;
   margin-top: 15px;
+  font-size: 14px;
+`;
+
+export const StyledAcceptButton = styled(Button)`
+  width: 250px;
+  height: 32px;
+  margin-top: 8px;
+  font-size: 14px;
+`;
+
+export const StyledDeleteButton = styled(SmallCloseIcon)`
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 16px;
+  right: 40px;
 `;
