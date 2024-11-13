@@ -24,9 +24,7 @@ export const UserSchedule = () => {
         {!ptDetail ? (
           <StyledDefaultText>PT 매칭을 기다려주세요!</StyledDefaultText>
         ) : ptDetail.schedules.length === 0 ? (
-          <StyledDefaultText>
-            PT 매칭 전이므로 등록된 PT 일정이 없습니다.
-          </StyledDefaultText>
+          <StyledDefaultText>등록된 PT 일정이 없습니다.</StyledDefaultText>
         ) : (
           ptDetail.schedules.map((schedule, index) => (
             <StyledCard key={index}>
