@@ -17,6 +17,7 @@ import { SentProposal } from '@/pages/Proposal/SentProposal';
 import { TrainerDetail } from '@/pages/Proposal/TrainerDetail';
 import { TrainerPtSchedulePage } from '@/pages/PtSchedule/TrainerPtSchedule';
 import { UserPtSchedulePage } from '@/pages/PtSchedule/UserPtSchedule';
+import { RegisterReview } from '@/pages/Review/RegisterReview';
 import { SignupPage } from '@/pages/Signup';
 import { TrainerSignupPage } from '@/pages/Signup/TrainerSignup';
 import { UserSignupPage } from '@/pages/Signup/UserSignup';
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
       {
         path: RouterPath.selectGym,
         element: <SelectGym />,
+      },
+      {
+        path: RouterPath.registerReview,
+        element: <RegisterReview />,
       },
     ],
   },
