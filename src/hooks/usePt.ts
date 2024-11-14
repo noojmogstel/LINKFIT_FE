@@ -29,8 +29,8 @@ export const usePt = () => {
       alert('PT 수락이 완료되었습니다.');
       navigate(RouterPath.userPtSchedule);
     } catch (error) {
-      console.error('일정 완료 처리 실패:', error);
-      alert('일정 완료 처리에 실패했습니다.');
+      console.error('PT 수락 처리 실패:', error);
+      alert('PT 수락 처리에 실패했습니다.');
     }
   };
 
@@ -40,8 +40,8 @@ export const usePt = () => {
       alert('PT 거절이 완료되었습니다.');
       window.location.reload();
     } catch (error) {
-      console.error('일정 완료 처리 실패:', error);
-      alert('일정 완료 처리에 실패했습니다.');
+      console.error('PT 거절 처리 실패:', error);
+      alert('PT 거절 처리에 실패했습니다.');
     }
   };
 
