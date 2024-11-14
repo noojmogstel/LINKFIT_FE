@@ -10,7 +10,7 @@ export const useSchedule = () => {
       window.location.reload();
     } catch (error) {
       console.error('PT 일정 추가 실패:', error);
-      alert('PT 일정 추가에 실패했습니다.');
+      alert('PT 횟수를 초과하여 일정을 추가할 수 없습니다.');
     }
   };
 
