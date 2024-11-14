@@ -51,3 +51,17 @@ export const StyledChatButton = styled(Button)`
   height: 30px;
   margin-top: 12px;
 `;
+
+export const StyledReviewButton = styled(Button)`
+  background-color: white;
+  color: ${colors.mainColor};
+  border: 1px solid ${colors.mainColor};
+  &:hover {
+    background-color: ${colors.mainColor};
+    color: white;
+  }
+  width: 52px;
+  height: 26px;
+  margin: 15px 0px 0px 10px;
+  font-size: 11px;
+`;
