@@ -12,8 +12,11 @@ import {
   StyledTitleText,
   Wrapper,
 } from './RegisterReview.styles';
+import { useNavigate } from 'react-router-dom';
+import { RouterPath } from '@/routes/path';
 
 export const RegisterReview = () => {
+  const navigate = useNavigate();
   const { submitReview } = useReview();
 
   const [content, setContent] = useState('');
@@ -21,6 +24,7 @@ export const RegisterReview = () => {
 
   const handleSubmit = async () => {
     await submitReview({ content, score });
+    navigate(RouterPath.home);
   };
 
   return (
