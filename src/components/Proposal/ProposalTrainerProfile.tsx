@@ -30,6 +30,10 @@ export const ProposalTrainerProfile = ({
     );
   };
 
+  const navigateToReview = (trainerId: number) => {
+    navigate(RouterPath.review.replace(':trainerId', trainerId.toString()));
+  };
+
   const { handleAcceptPt, handleDeletePt } = usePt();
   return (
     <Wrapper onClick={() => navigateToTrainerDetail(proposal.trainerId)}>
@@ -50,7 +54,14 @@ export const ProposalTrainerProfile = ({
           </Flex>
 
           <StyledButtonWrapper>
-            <StyledReviewButton>리뷰 보기</StyledReviewButton>
+            <StyledReviewButton
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateToReview(proposal.trainerId);
+              }}
+            >
+              리뷰 보기
+            </StyledReviewButton>
             <StyledChatButton
               width='120px'
               height='32px'
