@@ -159,3 +159,10 @@ export interface Review {
   score: number;
   content: string;
 }
+
+export interface ReviewResponse {
+  reviewId: number;
+  content: string;
+  createDate: string;
+  score: number;
+}
