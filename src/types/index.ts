@@ -154,3 +154,8 @@ export interface Gym {
   name: string;
   location: string;
 }
+
+export interface Review {
+  score: number;
+  content: string;
+}
