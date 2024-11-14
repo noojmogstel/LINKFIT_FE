@@ -1,4 +1,4 @@
-import { Button, CardBody, Image, Text } from '@chakra-ui/react';
+import { Button, CardBody, Flex, Image, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
 import { colors } from '@/styles/colors';
@@ -31,9 +31,15 @@ export const StyledProfileImage = styled(Image)`
   margin-right: 20px;
 `;
 
+export const StyledFlex = styled(Flex)`
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
 export const StyledNameText = styled(Text)`
   font-weight: 800;
   font-size: 20px;
+  margin-top: 15px;
 `;
 
 export const StyledGymText = styled(Text)`
