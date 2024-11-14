@@ -1,6 +1,8 @@
 import { Card, Flex } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 import { usePtDetail } from '@/hooks/usePtDetail';
+import { RouterPath } from '@/routes/path';
 import { UserPtDetail } from '@/types';
 
 import { ChattingButton } from '../Chat/ChattingButton';
@@ -10,11 +12,19 @@ import {
   StyledGymText,
   StyledNameText,
   StyledProfileImage,
+  StyledReviewButton,
   Wrapper,
 } from './TrainerProfile.styles';
 
 export const TrainerProfile = () => {
+  const navigate = useNavigate();
   const { ptDetail } = usePtDetail<UserPtDetail>();
+
+  const navigateToReview = (trainerId: number) => {
+    navigate(
+      RouterPath.registerReview.replace(':trainerId', trainerId.toString())
+    );
+  };
 
   return (
     <Wrapper>
@@ -34,7 +44,14 @@ export const TrainerProfile = () => {
                 <StyledGymText>소속 : {ptDetail.gymName}</StyledGymText>
               </Flex>
             </Flex>
-            <ChattingButton opponentId={ptDetail.trainerId} />
+            <Flex>
+              <ChattingButton opponentId={ptDetail.trainerId} />
+              <StyledReviewButton
+                onClick={() => navigateToReview(ptDetail.trainerId)}
+              >
+                리뷰 작성
+              </StyledReviewButton>
+            </Flex>
           </StyledCardBody>
         </Card>
       )}
