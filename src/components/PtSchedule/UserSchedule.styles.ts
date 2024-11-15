@@ -17,6 +17,10 @@ export const TitleText = styled(Text)`
   margin-bottom: 20px;
 `;
 
+export const StyledScheduleText = styled(Text)`
+  margin: 2px 0px 0px 10px;
+`;
+
 export const StyledDefaultText = styled(Text)`
   text-align: center;
 `;
