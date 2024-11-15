@@ -45,8 +45,7 @@ export const ProposalPage = () => {
     }
 
     await handleUploadProposal(proposalData);
-    // TODO : 추후 내 제안 기록 페이지로 이동
-    navigate(RouterPath.home);
+    navigate(RouterPath.sentProposal);
   };
 
   return (
