@@ -116,7 +116,7 @@ export interface UserPtDetail {
   trainerId: number;
   trainerName: string;
   gymName: string;
-  count: number;
+  totalCount: number;
   profileImageUrl: string;
   schedules: Schedule[];
 }
@@ -125,7 +125,7 @@ export interface TrainerPtDetail {
   userId: number;
   userName: string;
   profileImageUrl: string;
-  count: number;
+  totalCount: number;
   schedules: Schedule[];
 }
 

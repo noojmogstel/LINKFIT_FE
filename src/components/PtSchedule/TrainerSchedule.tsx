@@ -49,7 +49,7 @@ export const TrainerSchedule = () => {
       <Flex>
         <TitleText>PT 일정</TitleText>
         <StyledScheduleText>
-          ( {ptDetail?.schedules.length} / {ptDetail?.count} )
+          ( {ptDetail?.schedules.length} / {ptDetail?.totalCount} )
         </StyledScheduleText>
       </Flex>
       <FlexWrapper>
