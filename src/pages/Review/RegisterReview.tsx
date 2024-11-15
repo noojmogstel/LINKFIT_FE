@@ -7,6 +7,7 @@ import { RouterPath } from '@/routes/path';
 
 import {
   StyledButton,
+  StyledCountText,
   StyledFlex,
   StyledFormWrapper,
   StyledIcon,
@@ -23,6 +24,10 @@ export const RegisterReview = () => {
   const [score, setScore] = useState(3);
 
   const handleSubmit = async () => {
+    if (content.length < 10) {
+      alert('리뷰는 최소 10자 이상 작성해야 합니다.');
+      return;
+    }
     await submitReview({ content, score });
     navigate(RouterPath.home);
   };
@@ -43,9 +48,10 @@ export const RegisterReview = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-
+        <StyledCountText>{content.length} / 10자 이상</StyledCountText>
         <StyledButton onClick={handleSubmit}>제출하기</StyledButton>
       </StyledFormWrapper>
     </Wrapper>
   );
 };
+12;

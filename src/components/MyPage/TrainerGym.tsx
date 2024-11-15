@@ -12,7 +12,7 @@ export const TrainerGym = () => {
 
   return (
     <StyledCard>
-      <StyledTitleText>&#128196; 내 소속</StyledTitleText>
+      <StyledTitleText>&#128170; 내 소속</StyledTitleText>
       {!profile ? (
         <StyledDefaultText>등록된 소속이 없습니다.</StyledDefaultText>
       ) : (

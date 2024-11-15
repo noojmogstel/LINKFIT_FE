@@ -8,7 +8,9 @@ import {
   FlexWrapper,
   StyledCard,
   StyledCompleteButton,
+  StyledCompleteText,
   StyledDefaultText,
+  StyledFlex,
   StyledScheduleText,
   TitleText,
   Wrapper,
@@ -23,7 +25,7 @@ export const UserSchedule = () => {
       <Flex>
         <TitleText>PT 일정</TitleText>
         <StyledScheduleText>
-          ( {ptDetail?.schedules.length} / {ptDetail?.count} )
+          ( {ptDetail?.schedules.length} / {ptDetail?.totalCount} )
         </StyledScheduleText>
       </Flex>
       <FlexWrapper>
@@ -34,13 +36,19 @@ export const UserSchedule = () => {
         ) : (
           ptDetail.schedules.map((schedule, index) => (
             <StyledCard key={index}>
-              <Flex justifyContent='space-around'>
+              <StyledFlex>
                 <Text minWidth='100px'>
-                  {new Date(schedule.date).toLocaleDateString()}
+                  {new Date(schedule.date).toLocaleString('ko-KR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
                 </Text>
-                <Text>
+                <Flex alignItems='center'>
                   {schedule.isCompleted ? (
-                    '완료'
+                    <StyledCompleteText>완료</StyledCompleteText>
                   ) : (
                     <StyledCompleteButton
                       onClick={() =>
@@ -50,8 +58,8 @@ export const UserSchedule = () => {
                       완료
                     </StyledCompleteButton>
                   )}
-                </Text>
-              </Flex>
+                </Flex>
+              </StyledFlex>
             </StyledCard>
           ))
         )}

@@ -39,6 +39,11 @@ export const StyledTextarea = styled(Textarea)`
   height: 200px;
   resize: none;
   padding: 20px 30px 20px 30px;
+  margin-bottom: 10px;
+`;
+
+export const StyledCountText = styled(Text)`
+  font-size: 12px;
 `;
 
 export const StyledButton = styled(Button)`
