@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 import { useReview } from '@/hooks/useReview';
+import { RouterPath } from '@/routes/path';
 
 import {
   StyledButton,
@@ -12,8 +14,6 @@ import {
   StyledTitleText,
   Wrapper,
 } from './RegisterReview.styles';
-import { useNavigate } from 'react-router-dom';
-import { RouterPath } from '@/routes/path';
 
 export const RegisterReview = () => {
   const navigate = useNavigate();
