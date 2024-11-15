@@ -18,4 +18,6 @@ export const RouterPath = {
   trainerPtSchedule: '/trainerPtSchedule/:ptId',
   chatting: '/chats',
   selectGym: '/selectGym',
+  registerReview: '/registerReview/:trainerId',
+  review: '/review/:trainerId',
 };
