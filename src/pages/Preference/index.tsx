@@ -16,6 +16,8 @@ import { Preference } from '@/types';
 
 import {
   FormWrapper,
+  InbodyTextWrapper,
+  StyledInbodyAdditionalText,
   StyledInbodyText,
   StyledTitleText,
   TitleWrapper,
@@ -64,9 +66,14 @@ export const PreferencePage = () => {
           회원님에게 딱 맞는 트레이너와 연결해 드릴게요.
         </StyledTitleText>
       </TitleWrapper>
-      <StyledInbodyText>
-        인바디 이미지를 새롭게 업데이트하고 싶다면?
-      </StyledInbodyText>
+      <InbodyTextWrapper>
+        <StyledInbodyText>
+          아직 인바디 이미지를 등록하지 않았거나, 새롭게 등록하고 싶다면?
+        </StyledInbodyText>
+        <StyledInbodyAdditionalText>
+          인바디 이미지를 등록하지 않으면 PT 매칭이 불가능해요!
+        </StyledInbodyAdditionalText>
+      </InbodyTextWrapper>
       <RegisterInbodyButton />
       <Divider />
 
