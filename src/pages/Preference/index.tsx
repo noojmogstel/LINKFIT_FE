@@ -55,6 +55,11 @@ export const PreferencePage = () => {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (preference.range === null || preference.range <= 0) {
+      alert('거리는 1 이상의 양수로 입력해주세요.');
+      return;
+    }
+
     await handleUploadPreference(preference);
     navigate(RouterPath.home);
   };
