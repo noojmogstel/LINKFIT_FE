@@ -12,6 +12,7 @@ import {
   StyledAddButton,
   StyledButton,
   StyledCard,
+  StyledCompleteText,
   StyledDefaultText,
   StyledInput,
 } from './TrainerSchedule.styles';
@@ -57,11 +58,19 @@ export const TrainerSchedule = () => {
         ) : (
           ptDetail.schedules.map((schedule, index) => (
             <StyledCard key={index}>
-              <Flex justifyContent='space-around'>
-                <Text minWidth='100px'>
-                  {new Date(schedule.date).toLocaleDateString()}
-                </Text>
-                <Text>{schedule.isCompleted ? '완료' : '미완료'}</Text>
+              <Flex justifyContent='space-between'>
+                <StyledScheduleText>
+                  {new Date(schedule.date).toLocaleString('ko-KR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
+                </StyledScheduleText>
+                <StyledCompleteText>
+                  {schedule.isCompleted ? '완료' : '미완료'}
+                </StyledCompleteText>
               </Flex>
             </StyledCard>
           ))
