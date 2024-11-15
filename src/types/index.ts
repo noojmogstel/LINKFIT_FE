@@ -125,6 +125,7 @@ export interface TrainerPtDetail {
   userId: number;
   userName: string;
   profileImageUrl: string;
+  count: number;
   schedules: Schedule[];
 }
 
