@@ -9,6 +9,7 @@ import {
   StyledCard,
   StyledCompleteButton,
   StyledDefaultText,
+  StyledScheduleText,
   TitleText,
   Wrapper,
 } from './UserSchedule.styles';
@@ -19,7 +20,12 @@ export const UserSchedule = () => {
 
   return (
     <Wrapper>
-      <TitleText>PT 일정</TitleText>
+      <Flex>
+        <TitleText>PT 일정</TitleText>
+        <StyledScheduleText>
+          ( {ptDetail?.schedules.length} / {ptDetail?.count} )
+        </StyledScheduleText>
+      </Flex>
       <FlexWrapper>
         {!ptDetail ? (
           <StyledDefaultText>PT 매칭을 기다려주세요!</StyledDefaultText>
