@@ -29,7 +29,7 @@ export const PreferencePage = () => {
   const [preference, setPreference] = useState<Preference>({
     sportsId: 0,
     gender: '',
-    range: 0,
+    range: null,
     goal: '',
   });
 
@@ -86,13 +86,13 @@ export const PreferencePage = () => {
           </FormControl>
 
           <FormControl id='range' isRequired>
-            <FormLabel>선호하는 최대 거리를 알려주세요.</FormLabel>
+            <FormLabel>선호하는 최대 거리를 알려주세요. 단위: Km</FormLabel>
             <Input
               type='number'
-              placeholder='거리를 숫자로 입력해주세요'
+              placeholder='거리를 숫자로 입력해주세요. ex) 50'
               focusBorderColor='#FF1658'
               mb='10px'
-              value={preference.range}
+              value={preference.range ?? ''}
               onChange={handleInputChange}
             />
           </FormControl>

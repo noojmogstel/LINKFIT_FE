@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 import { useReview } from '@/hooks/useReview';
+import { RouterPath } from '@/routes/path';
 
 import {
   StyledButton,
@@ -14,6 +16,7 @@ import {
 } from './RegisterReview.styles';
 
 export const RegisterReview = () => {
+  const navigate = useNavigate();
   const { submitReview } = useReview();
 
   const [content, setContent] = useState('');
@@ -21,6 +24,7 @@ export const RegisterReview = () => {
 
   const handleSubmit = async () => {
     await submitReview({ content, score });
+    navigate(RouterPath.home);
   };
 
   return (

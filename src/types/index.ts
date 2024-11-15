@@ -61,7 +61,7 @@ export interface CareerResponse {
 export interface Preference {
   sportsId: number;
   gender: string;
-  range: number;
+  range: number | null;
   goal: string;
 }
 
