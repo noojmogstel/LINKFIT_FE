@@ -18,6 +18,7 @@ import {
   FormWrapper,
   InbodyTextWrapper,
   StyledInbodyAdditionalText,
+  StyledInbodyButton,
   StyledInbodyText,
   StyledTitleText,
   TitleWrapper,
@@ -34,6 +35,10 @@ export const PreferencePage = () => {
     range: null,
     goal: '',
   });
+
+  const navigateToMypage = () => {
+    navigate(RouterPath.mypage);
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
@@ -79,7 +84,9 @@ export const PreferencePage = () => {
           인바디 이미지를 등록하지 않으면 PT 매칭이 불가능해요!
         </StyledInbodyAdditionalText>
       </InbodyTextWrapper>
-      <RegisterInbodyButton />
+      <StyledInbodyButton onClick={navigateToMypage}>
+        인바디 등록하기
+      </StyledInbodyButton>
       <Divider />
 
       <form onSubmit={handleFormSubmit}>
