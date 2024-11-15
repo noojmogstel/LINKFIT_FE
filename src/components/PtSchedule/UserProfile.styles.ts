@@ -28,14 +28,3 @@ export const StyledNameText = styled(Text)`
   font-weight: 800;
   font-size: 20px;
 `;
-
-export const StyledChatButton = styled(Button)`
-  background-color: ${colors.mainColor};
-  color: ${colors.white};
-  &:hover {
-    background-color: #ff467e;
-  }
-  width: 80%;
-  height: 30px;
-  margin-top: 12px;
-`;
