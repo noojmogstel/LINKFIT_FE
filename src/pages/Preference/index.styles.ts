@@ -53,3 +53,13 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   margin-top: 10px;
 `;
+
+export const StyledInbodyButton = styled(Button)`
+  width: 160px;
+  background-color: ${colors.mainColor};
+  color: ${colors.white};
+
+  &:hover {
+    background-color: #ff467e;
+  }
+`;
