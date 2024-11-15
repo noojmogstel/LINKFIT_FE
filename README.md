@@ -26,8 +26,12 @@ LINKFIT는 일반회원과 트레이너회원이 상호 소통하며, 일반회�
 
 #### 일정 관리 기능:
 
-PT 성사 후 일반회원과 트레이너회원의 서로의 일정을 관리할 수 있는 기능을 제공하여, 효율적인 PT 세션 계획을 돕습니다.
+PT 성사 후 일반회원과 트레이너회원의 서로의 일정을 관리할 수 있는 기능을 제공하여, 효율적인 PT 계획을 돕습니다.
 
 ## 기술 스택
 
-- Frontend: React, TypeScript, Chakra UI
+- Frontend: React, TypeScript, Chakra UI, Context API
+
+##### 저작권
+
+- '이미지: flaticon.com'
