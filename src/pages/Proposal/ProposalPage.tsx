@@ -57,7 +57,7 @@ export const ProposalPage = () => {
       <form onSubmit={handleFormSubmit}>
         <FormWrapper>
           <FormControl id='totalCount' isRequired>
-            <FormLabel>제안하실 PT 횟수를 입력해주세요.</FormLabel>
+            <FormLabel>제안하실 PT 횟수를 입력해주세요. ex) 5</FormLabel>
             <Input
               type='number'
               placeholder='숫자를 입력해주세요.'
@@ -69,7 +69,7 @@ export const ProposalPage = () => {
           </FormControl>
 
           <FormControl id='price' isRequired>
-            <FormLabel>제안하실 PT 가격을 입력해주세요.</FormLabel>
+            <FormLabel>제안하실 PT 가격을 입력해주세요. ex) 100000</FormLabel>
             <Input
               type='number'
               placeholder='숫자를 입력해주세요.'
